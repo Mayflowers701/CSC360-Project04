@@ -5,9 +5,16 @@
 #include <utility>
 #include <string>
 
-//structure for field because using the symbol "vector<pair<string, pair<double, double>>>" got silly
-struct starField {
-    std::vector<std::pair<std::string, std::pair<double, double>>> v;
+//star class
+class star {
+public:
+  std::pair<std::string, std::pair<double, double> > s;
+};
+
+//star field class
+class starField {
+public:
+  std::vector<star> v;
 };
 
 #endif

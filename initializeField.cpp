@@ -15,17 +15,17 @@ starField initializeField(string fileName) {
 	//number of points in field
 	int fieldSize;
 	file >> fieldSize;
-	
+
 	//initialize field to array with size fieldSize
 	starField field;
 
 	//initialize field
-	pair<string, pair<double, double> > star;
+	star newStar;
 	for (int i = 0; i < fieldSize; i++) {
-		file >> star.first;
-		file >> star.second.first;
-		file >> star.second.second;
-		field.v.push_back(star);
+		file >> newStar.s.first;
+		file >> newStar.s.second.first;
+		file >> newStar.s.second.second;
+		field.v.push_back(newStar);
 	}
 
 	//return
