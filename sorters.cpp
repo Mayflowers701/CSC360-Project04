@@ -6,11 +6,13 @@
 using namespace std;
 
 //custom comparators for use by std::sort
+//compare x-values
 bool compX(star &a, star &b){
 
 	return a.s.second.first < b.s.second.first;
 }
 
+//compare y-values
 bool compY(star &a, star &b){
 
 	return a.s.second.second < b.s.second.second;
