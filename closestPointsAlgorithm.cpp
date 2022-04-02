@@ -7,7 +7,7 @@
 using namespace std;
 
 //prototype for recursive solution
-void recursiveClosestPoints(starField &field, double& shortestDistance, star &A, star &B);
+double recursiveClosestPoints(starField &field, double& shortestDistance, star &A, star &B);
 
 //prototypes for sorters
 void sortX(starField &field);

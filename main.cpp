@@ -8,6 +8,7 @@ using namespace std;
 //prototypes
 starField initializeField(string fileName);
 void closestPointsAlgorithm(starField &field);
+void printField(starField field);
 
 //main: opens file, calls initializeField, calls closestPointsAlgorithm
 int main(int argc, char* argv[]){
@@ -22,10 +23,7 @@ int main(int argc, char* argv[]){
     // -----
 
     //print field for testing
-    for (unsigned i = 0; i < field.v.size(); i++) {
-        cout << field.v[i].s.first << " " << field.v[i].s.second.first << " " << field.v[i].s.second.second << endl;
-    }
-    cout << endl;
+    //printField(field);
 
     // -----
 
