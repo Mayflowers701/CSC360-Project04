@@ -1,11 +1,11 @@
 OBJS = main.o closestPointsAlgorithm.o distance.o initializeField.o recursiveClosestPoints.o sliceClosest.o sorters.o
-H = starField.hpp
-cc = g++ -c -g -Wall -ansi -pedantic -std=c++2a
+H = starField.hpp makefile
+cc = g++ -c -O -Wall -ansi -pedantic -std=c++2a
 
 p4: $(OBJS)
 	g++ -o p4 $(OBJS)
 
-main.o: main.cpp $(H)
+main.o: main.cpp $(H) makefile
 	$(cc) main.cpp
 
 closestPointsAlgorithm.o: closestPointsAlgorithm.cpp $(H)
