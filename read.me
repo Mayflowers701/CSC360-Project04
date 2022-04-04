@@ -24,7 +24,7 @@ project was relatively straightforward.
 One thing of interest:
 std::sort is used to sort some custom classes. This presented an interesting challenge, as I needed
 to be able to sort by either x or y depending on the circumstance, meaning a simple < overload would not do.
-I originally intended to write my own sorter, to get around this issue, but reading the documentation for
+I originally intended to write my own sorter to get around this issue, but reading the documentation for
 std::sort made me realize that I could get the functionality I wanted without the bloat of custom sorters
 in the codebase. I've used a simple pair of custom comparator functions here, but looking at alternative
 approaches involving inline functions and lambdas made for some interesting reading.

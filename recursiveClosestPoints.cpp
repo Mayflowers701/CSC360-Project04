@@ -68,11 +68,27 @@ double recursiveClosestPoints(starField &field, double& shortestDistance, star &
   //---
 
 	//recursive calls
-  double lResult = recursiveClosestPoints(lField, shortestDistance, A, B);
-  double rResult = recursiveClosestPoints(rField, shortestDistance, A, B);
+  star lA;
+  star lB;
+  double lResult = recursiveClosestPoints(lField, shortestDistance, lA, lB);
+
+  star rA;
+  star rB;
+  double rResult = recursiveClosestPoints(rField, shortestDistance, rA, rB);
 
   //keep smaller of these:
   double delta = min(lResult, rResult);
+
+  star deltaA;
+  star deltaB;
+  if(lResult < rResult){
+    deltaA = lA;
+    deltaB = lB;
+  }
+  else{
+    deltaA = rA;
+    deltaB = rB;
+  }
 
   //---
 
@@ -93,10 +109,24 @@ double recursiveClosestPoints(starField &field, double& shortestDistance, star &
 	//"sort" slice by y-coordinate ( Onlogn )
   sortY(slice);
 
+  //temp stars
+  star sliceA;
+  star sliceB;
+
 	//compute distance of each point from its next eleven neighbors ( On )
-  double sliceResult = sliceClosest(field, delta, A, B);
+  double sliceResult = sliceClosest(field, delta, sliceA, sliceB);
 
   double solution = min( sliceResult, delta );
+
+  if( sliceResult < delta){
+    A = sliceA;
+    B = sliceB;
+  }
+  else{
+    A = deltaA;
+    B = deltaB;
+  }
+
   shortestDistance = solution;
 
 	//return ssolution

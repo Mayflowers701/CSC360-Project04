@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -10,8 +11,11 @@ int main(int argc, char* argv[]){
   int count = 1000;
   writer << count << endl;
 
-  for(int i = 0; i < count; i++){
-    writer << "obj" << i+1 << " " << i << " " << i << endl;
+  writer << "obj" << 1 << " " << 50 << " " << 75 << endl;
+  writer << "obj" << 2 << " " << 50.5 << " " << 75 << endl;
+
+  for(int i = 2; i < count; i++){
+    writer << "obj" << i+1 << " " << rand() % 1000000 << " " << rand() % 1000000 << endl;
   }
 
   writer.close();
@@ -21,7 +25,7 @@ int main(int argc, char* argv[]){
   writer << count << endl;
 
   for(int i = 0; i < count; i++){
-    writer << "obj" << i+1 << " " << i << " " << i << endl;
+    writer << "obj" << i+1 << " " << rand() % 1000000 << " " << rand() % 1000000 << endl;
   }
 
   writer.close();
@@ -31,7 +35,7 @@ int main(int argc, char* argv[]){
   writer << count << endl;
 
   for(int i = 0; i < count; i++){
-    writer << "obj" << i+1 << " " << i << " " << i << endl;
+    writer << "obj" << i+1 << " " << rand() % 1000000 << " " << rand() % 1000000 << endl;
   }
 
 
