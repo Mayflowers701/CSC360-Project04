@@ -1,0 +1,33 @@
+Programming Project 04
+Eli Madi
+2022 April 04
+Developed and tested on Ubuntu 20.04.3
+
+To compile:
+Compile all files together.
+
+Description:
+Takes one argument: file name, used to open input file.
+
+Opens input file describing a field of points, finds the two closest points, and returns these
+points and the distance between them. This is accomplished using a divide-and conquer algorithm.
+
+This version runs in O(nlogn^2) time.
+
+General Approach:
+As pseudocode was provided, the challenge in completing this project was primarily in interpreting
+the abstract algorithm into actual code. For instance, an early hurdle was realizing that "draw a
+vertical line through the field such that half the points are on each side" really means "sort the
+points by x value, then divide that array in half." Aside from these conceptual challenges, this
+project was relatively straightforward.
+
+One thing of interest:
+std::sort is used to sort some custom classes. This presented an interesting challenge, as I needed
+to be able to sort by either x or y depending on the circumstance, meaning a simple < overload would not do.
+I originally intended to write my own sorter, to get around this issue, but reading the documentation for
+std::sort made me realize that I could get the functionality I wanted without the bloat of custom sorters
+in the codebase. I've used a simple pair of custom comparator functions here, but looking at alternative
+approaches involving inline functions and lambdas made for some interesting reading.
+
+Known Bugs:
+No known bugs at this time.
