@@ -1,3 +1,11 @@
+/*
+* FILE: main.cpp
+* AUTHOR: Eli Madi
+* DATE: April 04, 2022
+* PURPOSE: Main method for CSC36000 Programming Project 04. Calls initializeField and closestPointsAlgorithm using
+* arguments from the command line.
+*/
+
 #include <iostream>
 #include <fstream>
 
@@ -19,11 +27,6 @@ int main(int argc, char* argv[]){
 
     //initialize field
     starField field = initializeField("test0.txt");
-
-    // -----
-
-    //print field for testing
-    //printField(field);
 
     // -----
 

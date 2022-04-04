@@ -1,3 +1,10 @@
+/*
+* FILE: sliceClosest.cpp
+* AUTHOR: Eli Madi
+* DATE: April 04, 2022
+* PURPOSE: Method for calculating the closest two points across the dividing line.
+*/
+
 #include <iostream>
 
 #include "starField.hpp"

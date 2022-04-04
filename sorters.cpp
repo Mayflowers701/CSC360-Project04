@@ -1,3 +1,10 @@
+/*
+* FILE: sorters.cpp
+* AUTHOR: Eli Madi
+* DATE: April 04, 2022
+* PURPOSE: Comparators and Methods for sorting stars by x and y values.
+*/
+
 #include <string>
 #include <algorithm>
 

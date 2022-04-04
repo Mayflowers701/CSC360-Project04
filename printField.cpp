@@ -1,3 +1,12 @@
+/*
+* FILE: printField.cpp
+* AUTHOR: Eli Madi
+* DATE: April 04, 2022
+* PURPOSE: Test output for starField.
+*
+* ELI, DO NOT FORGET TO REMOVE THIS BEFORE YOU TURN THE PROJECT IN!
+*/
+
 #include <iostream>
 
 #include "starField.hpp"

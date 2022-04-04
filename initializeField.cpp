@@ -1,3 +1,10 @@
+/*
+* FILE: initializeField.cpp
+* AUTHOR: Eli Madi
+* DATE: April 04, 2022
+* PURPOSE: Method for initializing a starField from input file.
+*/
+
 #include <fstream>
 #include <utility>
 #include <string>

@@ -1,3 +1,10 @@
+/*
+* FILE: recursiveClosestPoints.cpp
+* AUTHOR: Eli Madi
+* DATE: April 04, 2022
+* PURPOSE: Recursive algorithm for solving the closest points problem.
+*/
+
 #include <iostream>
 #include <float.h>
 
@@ -84,12 +91,6 @@ double recursiveClosestPoints(starField &field, double& shortestDistance, star &
 
 	//compute distance of each point from its next eleven neighbors ( On )
   double sliceResult = sliceClosest(field, delta);
-
-  /*
-  cout << delta << endl;
-  cout << k << endl;
-  printField(slice);
-  */
 
   double solution = min( sliceResult, delta );
   shortestDistance = solution;

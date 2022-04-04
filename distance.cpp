@@ -1,3 +1,10 @@
+/*
+* FILE: distance.cpp
+* AUTHOR: Eli Madi
+* DATE: April 04, 2022
+* PURPOSE: Method for finding the distance between two points.
+*/
+
 #include <iostream>
 #include <math.h>
 #include "starField.hpp"

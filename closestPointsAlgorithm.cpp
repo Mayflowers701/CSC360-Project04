@@ -1,3 +1,11 @@
+/*
+* FILE: closestPointsAlgorithm.cpp
+* AUTHOR: Eli Madi
+* DATE: April 04, 2022
+* PURPOSE: "Front-end" funtion for solving closest points problem recursively.
+* Sorts points and calls recursiveClosestPoints, then prints solution to console.
+*/
+
 #include <string>
 #include <float.h>
 #include <iostream>
