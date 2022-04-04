@@ -21,12 +21,16 @@ void printField(starField field);
 //main: opens file, calls initializeField, calls closestPointsAlgorithm
 int main(int argc, char* argv[]){
 
-    cout << "Test" << endl;
+    if(argc != 2){
+      cout << "This program accepts only one argument. You passed: " << argc -1 << endl;
+      return 0;
+    }
 
-    //COME BACK AND SET THIS UP TO USE THE COMMAND LINE
+    //handle command line input
+    string argv1 = argv[1];
 
     //initialize field
-    starField field = initializeField("test0.txt");
+    starField field = initializeField(argv1);
 
     // -----
 

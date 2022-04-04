@@ -19,7 +19,7 @@ double distance(star &a, star &b);
 void sortY(starField &field);
 
 //prototype for sliceClosest
-double sliceClosest(starField &field, double delta);
+double sliceClosest(starField &field, double delta, star &A, star &B);
 
 //testing
 void printField(starField &field);
@@ -39,6 +39,10 @@ double recursiveClosestPoints(starField &field, double& shortestDistance, star &
   //init new halves
   starField lField;
   starField rField;
+
+  //reserve appropriate space to prevent resizing
+  lField.v.reserve(field.v.size());
+  rField.v.reserve(field.v.size());
 
   //determine x-coordinate for vertical split k
 
@@ -90,7 +94,7 @@ double recursiveClosestPoints(starField &field, double& shortestDistance, star &
   sortY(slice);
 
 	//compute distance of each point from its next eleven neighbors ( On )
-  double sliceResult = sliceClosest(field, delta);
+  double sliceResult = sliceClosest(field, delta, A, B);
 
   double solution = min( sliceResult, delta );
   shortestDistance = solution;

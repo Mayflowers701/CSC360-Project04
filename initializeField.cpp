@@ -17,7 +17,7 @@ using namespace std;
 starField initializeField(string fileName) {
 
 	//open file
-	ifstream file("test0.txt");
+	ifstream file(fileName);
 
 	//number of points in field
 	int fieldSize;
@@ -25,6 +25,9 @@ starField initializeField(string fileName) {
 
 	//initialize field to array with size fieldSize
 	starField field;
+
+	//reserve appropriate space to avoid resizing!
+	field.v.reserve(fieldSize);
 
 	//initialize field
 	star newStar;
