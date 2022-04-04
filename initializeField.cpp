@@ -5,6 +5,7 @@
 * PURPOSE: Method for initializing a starField from input file.
 */
 
+#include <iostream>
 #include <fstream>
 #include <utility>
 #include <string>
